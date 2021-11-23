@@ -1,0 +1,184 @@
+
+html body header nav {
+
+    position: relative;
+    margin:0;
+    padding:0;
+  }
+.titulo {
+width: 100%;
+height: 250px; 
+/* Como poner otra medida en este caso que no sea px para que sea responsive */
+background-color: blue;    
+overflow: hidden;
+/* el hiddden estaria bien? para que no se salga de las medidas */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  
+    
+}
+.titulo__texto{
+   
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+margin-right: 40%; 
+border:black solid 10px;
+padding:2% 2%;
+/* Como hacer para no usar margin y usar  propiedad de flex */
+    
+
+} 
+.titulo__imagen{
+    width: 500px;
+    margin-left: 10;
+    height: 250px;
+    border-radius: 10px;
+
+} 
+
+.menu{
+    position: sticky;
+    top: 0;
+    background:#D3D3D3;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style:none;
+    margin-right:30px;
+     overflow: hidden; /*este hidden estaria  bien?*/
+     margin: 0;
+     padding: 0;
+    
+    
+} 
+
+.menu li {
+
+margin-right: 2%;
+
+}
+
+.menu li a{
+padding: 7px 13px;
+text-decoration: none;
+display: block;
+font-weight:bold;
+font-size: 30px;
+color: black;
+}
+
+
+.final{
+position:fixed;
+bottom:0;
+    background:blue;
+    width: 100%;
+    height: 100px;
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+    list-style:none;
+    margin-right:30px;
+     overflow: hidden; /*este hidden estaria  bien?*/
+     margin: 0;
+     padding: 0;
+    }
+    
+    .final__pagina{
+    display: flex;
+    align-items: center;
+    list-style:none;
+    text-decoration: none;
+
+
+    }
+
+    /* .final li {
+  margin: 0 10%;        
+        
+           
+        } */
+    .final li h3{
+        display:block;
+        
+        text-decoration: none;
+        font-weight:bold;
+        font-size: 30px;
+        color: black;
+       
+           
+        }
+        .final__pagina--tel{
+            margin-left: -240%;
+
+        }
+
+        .final__pagina--mail{
+            margin-left: 10%;
+
+        }
+
+
+        .final__instagram{
+        
+            padding: 7px 13px;
+            text-decoration: none;
+            display: block;
+            font-weight:bold;
+            font-size: 30px;
+            color: black;
+        margin-right: 10%;
+                   
+            }
+
+
+         
+.final__imagen{
+    border-radius: 10px;
+    width: 50px;
+    height: 60px;
+    padding: 0;
+  align-self: center;
+    
+     display: block;
+     margin-left: 1%;
+    
+}
+
+
+.contenido {
+     position:relative;
+    background:white;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+
+    /* justify-items:center; PORQUE NO FUNCIONA? */
+     margin:0;
+     padding:0;
+      /* esta bien el auto? */
+}
+.contenido article{
+    /* position:relative; */
+    display:block;
+  margin: 0 3%;
+  height: auto;
+  /* width: 50%; */
+  border: black solid 5px;
+  
+    
+
+ }
+/* .contenido__imagen--mlibre{
+    position:relative;
+
+    justify-items: center;
+
+}  */
