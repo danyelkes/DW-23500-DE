@@ -1,0 +1,301 @@
+
+
+
+  *{
+    /* display: flex; */
+    /* min-height: 100vh; */
+    margin:0%;
+    padding:0%;
+    /* flex-direction: column; */
+  }
+
+  
+ /* #principal{
+      height: 100vh;
+display: grid;
+grid-template-areas: 
+   "header"
+   "nav"
+   "menu"
+"footer";
+grid-template-rows: 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr;
+} */
+ /* Porque no ocupa toda la pantalla como en la clase */
+ 
+/* header{
+grid-area: header;
+}
+nav{
+    grid-area: nav;
+    }
+    menu{
+        grid-area: menu;
+        }
+        footer{
+            grid-area: footer;
+            }   */
+.titulo {
+width: 100%;
+height: 8rem; /* ver bien que es rem */
+/* Como poner otra medida en este caso que no sea px para que sea responsive */
+background-color: blue;    
+overflow: hidden;
+/* el hiddden estaria bien? para que no se salga de las medidas */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  
+    
+}
+.titulo__texto{
+   
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+margin-right: 30rem; 
+border:black solid 5px;
+padding:2% 2%;
+/* Como hacer para no usar margin y usar  propiedad de flex */
+    
+
+} 
+.titulo__imagen{
+    width: 15rem;
+    margin-left: 10;
+    height: 8rem;
+    border-radius: 10px;
+
+} 
+
+
+.menu{
+     position: sticky;
+    top: 20px; /* porque no funciona el sticky?*/
+    background:#D3D3D3;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style:none;
+    margin-right:30px;
+       overflow: hidden; /*este hidden estaria  bien? */ 
+     margin: 0;
+     padding: 0;
+    
+    
+} 
+
+.menu li {
+
+margin-right: 2%;
+
+}
+
+.menu li a{
+padding: 7px 13px;
+text-decoration: none;
+display: block;
+font-weight:bold;
+font-size: 30px;
+color: black;
+}
+
+
+.final{
+
+position:relative;
+bottom: 0;
+margin-bottom: 0;
+  /* position:fixed
+  botton:0; */
+
+    background:blue;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+      justify-content:space-evenly;
+    align-items: center;
+     overflow: hidden; /*este hidden estaria  bien?*/
+     /* margin: 0;
+     padding: 0; */
+     
+    }
+    
+    /* .final__pagina{
+    display: flex;
+    align-items: center;
+    list-style:none;
+    text-decoration: none;
+
+
+    } */
+
+    /* .final li {
+  margin: 0 10%;        
+        
+           
+        } */
+    /* .final li h3{
+        display:block;
+        
+        text-decoration: none;
+        font-weight:bold;
+        font-size: 30px;
+        color: black;
+       
+            */
+       
+
+        .final__pagina--tel{
+            font-weight:bold;
+            font-size: 30px;
+            color: black;
+
+        }
+
+        .final__pagina--mail{
+            font-weight:bold;
+        font-size: 30px;
+        color: black; 
+
+        }
+
+
+        .final__instagram{
+        
+            padding: 7px 13px;
+            text-decoration: none;
+            display: block;
+            font-weight:bold;
+            font-size: 30px;
+            color: black;
+        margin-right: 10%;
+                   
+            } 
+
+
+         
+.final__imagen{
+    border-radius: 10px;
+    width: 50px;
+    height: 60px;
+    padding: 0;
+  align-self: center;
+    
+     display: block;
+     margin-left: 1%;
+    
+}
+
+
+.contenido {
+     position:relative;
+    background:white;
+    width: 100%;
+    height: auto;
+    display:flex;
+    justify-content: center;
+    justify-items: center;
+
+    /* justify-items:center; PORQUE NO FUNCIONA? */
+     margin:0;
+     padding:0;
+      /* esta bien el auto? */
+}
+.contenido article{
+    /* position:relative; */
+    display:block;
+  margin: 0 3%;
+  height: auto;
+  /* width: 50%; */
+  border: black solid 5px;
+  
+    
+
+ }
+/* .contenido__imagen--mlibre{
+    position:relative;
+
+    justify-items: center;
+
+}  */
+
+
+
+.formulario{
+
+    position:relative;
+   
+   
+        background:white;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        justify-content: center;
+            /*ver diferencia justify center y align items  */
+        list-style:none;
+        border: black solid 5px;
+       
+        
+        }
+        .formulario li{
+            list-style:none;
+        }       
+        /* .menuquienes{}  */
+        main{
+            /* height:100vh; */
+        }
+.principal{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    font-size: 30px;
+ 
+
+
+}
+        .segundo{
+            position: relative;
+            display: flex;
+         justify-content: center; 
+            align-items: center;
+            border: black solid 0.2rem;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding:0;
+            /* porque no funciona padding */
+            list-style:none;
+
+        }
+        
+        /* .tecero{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+         justify-content: center; 
+            align-items: center;
+
+            border: black solid 0.2rem;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding:0;
+            /* porque no funciona padding */
+           
+            /* PREGUNTAS
+            
+            Porque si pongo PADDING:0 EN .segundo no se achica el borde
+
+            Como hago para que el pie de pagina este siempre abajo
+            */
+
+
+
+        
