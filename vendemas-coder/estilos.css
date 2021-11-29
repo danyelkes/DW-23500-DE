@@ -3,8 +3,8 @@
 
   *{
     /* min-height: 100vh;  ver para que sirve*/
-    margin:0%;
-    padding:0%;
+    margin:0;
+    padding:0;
     
   }
 
@@ -144,13 +144,17 @@
         display:flex;
         justify-content: center;
         justify-items: center;
+        padding: 0;
 }
 .contenido article{
-    display:block;
-  margin: 0 3%;
-  height: auto;
-  border: black solid 5px;
+    border: black solid 5px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
 }
+
+
 
 
 
