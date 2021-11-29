@@ -2,46 +2,21 @@
 
 
   *{
-    /* display: flex; */
-    /* min-height: 100vh; */
+    /* min-height: 100vh;  ver para que sirve*/
     margin:0%;
     padding:0%;
-    /* flex-direction: column; */
+    
   }
 
   
- /* #principal{
-      height: 100vh;
-display: grid;
-grid-template-areas: 
-   "header"
-   "nav"
-   "menu"
-"footer";
-grid-template-rows: 1fr 1fr 1fr 1fr;
-grid-template-columns: 1fr;
-} */
- /* Porque no ocupa toda la pantalla como en la clase */
- 
-/* header{
-grid-area: header;
-}
-nav{
-    grid-area: nav;
-    }
-    menu{
-        grid-area: menu;
-        }
-        footer{
-            grid-area: footer;
-            }   */
+
 .titulo {
-width: 100%;
-height: 8rem; /* ver bien que es rem */
-/* Como poner otra medida en este caso que no sea px para que sea responsive */
-background-color: blue;    
-overflow: hidden;
-/* el hiddden estaria bien? para que no se salga de las medidas */
+    width: 100%;
+    height: 8rem; /* ver bien que es rem */
+    /* Como poner otra medida en este caso que no sea px para que sea responsive */
+    background-color: blue;    
+    overflow: hidden;
+    /* el hiddden estaria bien? para que no se salga de las medidas */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,10 +30,10 @@ overflow: hidden;
     font-size: 3rem;
     font-weight: bold;
     color: white;
-margin-right: 30rem; 
-border:black solid 5px;
-padding:2% 2%;
-/* Como hacer para no usar margin y usar  propiedad de flex */
+    margin-right: 30rem; 
+    border:black solid 5px;
+    padding:2% 2%;
+    /* Como hacer para no usar margin y usar  propiedad de flex */
     
 
 } 
@@ -69,11 +44,14 @@ padding:2% 2%;
     border-radius: 10px;
 
 } 
-
+.menu-sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+}
 
 .menu{
-     position: sticky;
-    top: 20px; /* porque no funciona el sticky?*/
+   
     background:#D3D3D3;
     width: 100%;
     height: 3rem;
@@ -82,7 +60,7 @@ padding:2% 2%;
     align-items: center;
     list-style:none;
     margin-right:30px;
-       overflow: hidden; /*este hidden estaria  bien? */ 
+    overflow: hidden; 
      margin: 0;
      padding: 0;
     
@@ -90,212 +68,163 @@ padding:2% 2%;
 } 
 
 .menu li {
-
-margin-right: 2%;
-
+    margin-right: 2%;
 }
 
 .menu li a{
-padding: 7px 13px;
-text-decoration: none;
-display: block;
-font-weight:bold;
-font-size: 30px;
-color: black;
+    padding: 7px 13px;
+    text-decoration: none;
+    display: block;
+    font-weight:bold;
+    font-size: 30px;
+    color: black;
+
+}
+.menu li a:hover{
+    color: orange;
 }
 
 
 .final{
 
-position:relative;
-bottom: 0;
-margin-bottom: 0;
+    position:relative;
+    bottom: 0;
+    margin-bottom: 0;
   /* position:fixed
-  botton:0; */
+  botton:0;  Esto se usaria si quiere que el pie de pagina apareza siempre abajo*/  
 
     background:blue;
     width: 100%;
     height: 4rem;
     display: flex;
-      justify-content:space-evenly;
+    justify-content:space-evenly;
     align-items: center;
-     overflow: hidden; /*este hidden estaria  bien?*/
-     /* margin: 0;
-     padding: 0; */
-     
-    }
+    overflow: hidden; /*este hidden estaria  bien?*/
+}
     
-    /* .final__pagina{
-    display: flex;
-    align-items: center;
-    list-style:none;
-    text-decoration: none;
-
-
-    } */
-
-    /* .final li {
-  margin: 0 10%;        
-        
-           
-        } */
-    /* .final li h3{
-        display:block;
-        
-        text-decoration: none;
-        font-weight:bold;
-        font-size: 30px;
-        color: black;
-       
-            */
-       
-
-        .final__pagina--tel{
+.final__pagina--tel{
             font-weight:bold;
             font-size: 30px;
             color: black;
+}
 
-        }
-
-        .final__pagina--mail{
-            font-weight:bold;
+.final__pagina--mail{
+        font-weight:bold;
         font-size: 30px;
         color: black; 
 
-        }
+}
 
 
-        .final__instagram{
+.final__instagram{
         
-            padding: 7px 13px;
-            text-decoration: none;
-            display: block;
-            font-weight:bold;
-            font-size: 30px;
-            color: black;
+        padding: 7px 13px;
+        text-decoration: none;
+        display: block;
+        font-weight:bold;
+        font-size: 30px;
+        color: black;
         margin-right: 10%;
-                   
-            } 
-
-
-         
+} 
 .final__imagen{
-    border-radius: 10px;
-    width: 50px;
-    height: 60px;
-    padding: 0;
-  align-self: center;
-    
+     border-radius: 10px;
+     width: 50px;
+     height: 60px;
+     padding: 0;
+     align-self: center;
      display: block;
      margin-left: 1%;
     
 }
 
-
 .contenido {
-     position:relative;
-    background:white;
-    width: 100%;
-    height: auto;
-    display:flex;
-    justify-content: center;
-    justify-items: center;
-
-    /* justify-items:center; PORQUE NO FUNCIONA? */
-     margin:0;
-     padding:0;
-      /* esta bien el auto? */
+        background:white;
+        width: 100%;
+        height: auto;
+        display:flex;
+        justify-content: center;
+        justify-items: center;
 }
 .contenido article{
-    /* position:relative; */
     display:block;
   margin: 0 3%;
   height: auto;
-  /* width: 50%; */
   border: black solid 5px;
-  
-    
-
- }
-/* .contenido__imagen--mlibre{
-    position:relative;
-
-    justify-items: center;
-
-}  */
+}
 
 
 
 .formulario{
-
-    position:relative;
-   
-   
         background:white;
         height: auto;
-        display: flex;
+        width: auto;
+        /* display: block; */
         flex-direction: column;
+        margin-top: 2rem;
+        padding: 3rem;
+        /* align-items: center;
+        justify-content: center; */
+            /*ver diferencia justify center y align items  */
+        border: black solid 5px;
+       /* margin-right: 0; */
+       
+}
         
+.formulario li{
+        list-style:none;
+}       
+        
+.principal{
+        display: flex;
         align-items: center;
         justify-content: center;
-            /*ver diferencia justify center y align items  */
-        list-style:none;
-        border: black solid 5px;
-       
-        
-        }
-        .formulario li{
-            list-style:none;
-        }       
-        /* .menuquienes{}  */
-        main{
-            /* height:100vh; */
-        }
-.principal{
-    position:relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: blue;
     font-size: 30px;
- 
+    flex-direction: column;
+    justify-items: center;
+    list-style:none;
+}
 
+.marco{
+    border: black solid 5px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.principal li
+{
+    list-style:none;
 
 }
-        .segundo{
-            position: relative;
-            display: flex;
-         justify-content: center; 
-            align-items: center;
-            border: black solid 0.2rem;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            padding:0;
-            /* porque no funciona padding */
-            list-style:none;
-
-        }
         
-        /* .tecero{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-         justify-content: center; 
-            align-items: center;
-
-            border: black solid 0.2rem;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            padding:0;
-            /* porque no funciona padding */
-           
-            /* PREGUNTAS
-            
-            Porque si pongo PADDING:0 EN .segundo no se achica el borde
-
-            Como hago para que el pie de pagina este siempre abajo
-            */
-
-
-
+.pricipal h4 {
+    align-items: center;
+    justify-content: center;
+}
         
+
+
+#contacto{
+          background-color: white;
+          display: grid;
+          grid-template-areas: 
+          "vacio1 formulario vacio2"
+          "instagram vacio3 mapa";
+          grid-template-columns: 1fr 50fr 1fr;
+          grid-template-rows: repeat(2,1fr);        
+          /* max-width: 500px;
+         margin:auto;   */
+}
+
+#instagram{
+    grid-area:instagram;
+}
+#mapa{
+    grid-area:mapa;
+}
+.formulario{
+    grid-area: formulario;
+}
