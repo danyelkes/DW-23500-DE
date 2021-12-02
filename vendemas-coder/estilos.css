@@ -2,11 +2,12 @@
   /* min-height: 100vh;  ver para que sirve*/
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .titulo {
   width: 100%;
-  height: 8rem;
+  height: auto;
   background-color: blue;
   overflow: hidden;
   display: flex;
@@ -16,12 +17,19 @@
   padding: 0;
   /* Titulo se refiere al encabezado de la pagina, es flex, de color azul */
 }
+@media (max-width:500px) {
+  .titulo{
+    display:block;
+    /* Como poner los elementos en el medio? */
+  } 
+  
+}   
 .titulo__texto {
   font-size: 3rem;
   font-weight: bold;
   color: white;
   margin-right: 30rem;
-  border: black solid 5px;
+  /* border: black solid 5px; */
   padding: 2% 2%;
   /*Es uno de los hijos de titulo, se le da propiedades al texto  */
 }
@@ -36,34 +44,43 @@
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
+  display: flex;
+  /* flex-wrap: wrap; */
   /* El nav tiene position sticky */
 }
 
 .menu {
   background: #d3d3d3;
   width: 100%;
-  height: 3rem;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   margin-right: 30px;
-  overflow: hidden;
   margin: 0;
   padding: 0;
+   /* flex-wrap: wrap;  */
+   
   /* El menu que es el nav es display flex. El hija que es la lista se le da el formato list stylle none para sacarle los puntos*/
 }
+ 
+ /* Uso media querie... si la pantalla es menor a 500 px display es block */
+ @media (max-width:500px) {
+  .menu{
+    display:block;
+  } 
+}   
 
 .menu li {
   margin-right: 2%;
+
 }
 
 .menu li a {
-  padding: 7px 13px;
   text-decoration: none;
-  display: block;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2rem;
   color: black;
 }
 .menu li a:hover {
@@ -80,12 +97,18 @@
 
   background: blue;
   width: 100%;
-  height: 4rem;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  overflow: hidden; /*este hidden estaria  bien?*/
+  /* overflow: hidden; este hidden estaria  bien? */
 }
+/* Uso media querie... si la pantalla es menor a 500 px display es block */
+@media (max-width:500px) {
+  .final{
+    display:block;
+  } 
+}   
 
 .final__pagina--tel {
   font-weight: bold;
@@ -127,6 +150,13 @@
   justify-items: center;
   padding: 0;
 }
+ /* Uso media querie... si la pantalla es menor a 500 px display es block */
+@media (max-width:500px) {
+  .contenido{
+    display:block;
+  }
+}
+
 .contenido article {
   border: black solid 5px;
   align-items: center;
@@ -188,13 +218,14 @@
   display: grid;
   grid-template-areas:
     "vacio1 formulario vacio2"
-    "instagram vacio3 mapa";
-  grid-template-columns: 1fr 50fr 1fr;
+    "instagram video mapa";
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
+  margin:auto;
+  align-items: center;
+  justify-content: center;
 
-  /* Se le da un ancho y largo a las columnas y filas del grid */
-  /* max-width: 500px;
-         margin:auto;   */
+
 }
 
 #instagram {
@@ -206,3 +237,14 @@
 .formulario {
   grid-area: formulario;
 }
+#video {
+  grid-area: video;
+  align-items: center;
+  justify-content: center;
+
+}
+@media (max-width:500px) {
+  #contacto{
+    display:block;
+  } 
+} 
