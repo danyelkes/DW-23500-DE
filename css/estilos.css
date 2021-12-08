@@ -256,9 +256,7 @@
 #mapa {
   grid-area: mapa;
 }
-#mapa:hover{
-  transform : scale(1.5);
-}
+
 .formulario {
   grid-area: formulario;
 }
