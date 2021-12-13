@@ -6,37 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VendeMas</title>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/estilos.css"">
+
 
 </head>
 
 <body>
 
+    <!-- Empieza el header -->
     <header class="titulo">
-        <img class="titulo__imagen" src="../recursos/vendemas.jpg"/>
+        <div class="container">
+            <!-- Agregando la clase row -->
+            <div class="row">
+                <div class="col-sm-6">
+
+        <img class="titulo__imagen" src="../recursos/vendemas.jpg">
+    </div>
+    <div class="col-sm-6">
+
         <h1 class="titulo__texto">VendeMas</h1>
+    </div>
+
+       </div>
+    </div>
+
     </header>
 
 
-    <nav class="menu-sticky">
-        <ul class="menu">
-            <li><a class="menu__index" href="../index.html">Inicio</a></li>
-            <li><a href="./quienessomos.html" class="menu__quienes">¿Quienes somos?</a></li>
-            <li><a href="./servicios.html" class="menu__servicios">Servicios</a></li>
-            <!-- <ul>
-                <li><a href="./casosdeexito.html">Ver Clientes</a></li></li>
-           </ul> -->
-            <li><a class="menu__casos" href="./casosdeexito.html">Casos de exito</a></li>
-            <li> <a class="menu__contacto" href="./contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+               aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="menu navbar-nav mr-auto">
+           <li class="nav-item active">
+               <a class="menu__index nav-link" href="../index.html">Inicio<span class="sr-only"></span></a>
+           </li>
+           <li class="nav-item active">
+               <a href="./quienessomos.html" s.html" class="menu__quienes nav-link">¿Quienes somos?<span class="sr-only"></span></a></li>
+           <li class="nav-item dropdown nav-item active">
+               <a href="./servicios.html" class="menu__servicios nav-link dropdown-toggle" id="navbarDropdown" role="button" 
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="./servicios.html">Consultoria</a>
+                   <a class="dropdown-item" href="./servicios.html">Asesoramiento</a>
+                  </div>
+           </li>
+
+           <li class="nav-item active">
+               <a class="menu__casos nav-link" href="./casosdeexito.html">Casos de exito<span class="sr-only"></a>
+           </li>
+           <li class="nav-item active">
+                <a class="menu__contacto nav-link" href="./contacto.html">Contacto<span class="sr-only"></span></a>
+               </li>
+       </ul>
+   </nav>
+
+
 
 
     <main>
 
         <div class="principal">
+         
             <div class="marco">
-
+             
                 <h2>¿Quienes somos?</h2>
                 <h4>
                     Somos una consultora que brinda asesoramiento para que las empresas puedan incrementar sus ventas en
@@ -47,21 +88,32 @@
                     Estamos conformados por un equipo de profesionales expertos en Ecommerce, con amplia experiencia en
                     la plataforma
                 </h4>
+            </div> 
+            </div>
             </div>
         </div>
     </main>
 
 
     <footer class="final">
-        <img class="final__imagen" src="../recursos/whatsapp.jpg" alt="">
-
-
-        <h3 class="final__pagina--tel"> Whatsapp:+54113264633 </h3>
-        <h3 class="final__pagina--mail">Vendemas@gmail.com </h3>
-
-
-        <a href="https://www.instagram.com/vendemas.dig/" target="_blank" class="final__instagram">Instagram</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img class="final__imagen" src="../recursos/whatsapp.jpg" alt="">
+                </div>
+                  <div class="col">
+                    <h3 class="final__pagina--tel"> Whatsapp:+54113264633 </h3>
+                  </div>
+                  <div class="col">
+                    <h3 class="final__pagina--mail">Vendemas@gmail.com </h3>
+                  </div>
+                  <div class="col">
+                    <a href="https://www.instagram.com/vendemas.dig/" target="_blank" class="final__instagram">Instagram</a>
         <!-- redireccion al link  de instagram-->
+
+                  </div>
+    </div>
+</div>
     </footer>
 </body>
 
