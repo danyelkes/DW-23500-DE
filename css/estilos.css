@@ -8,8 +8,8 @@
 .titulo {
   width: 100%;
   height: auto;
-  background: radial-gradient(circle,blue, white);  
-/* Al fondo de final se le da un degrade */
+  background: radial-gradient(circle, blue, white);
+  /* Al fondo de final se le da un degrade */
 
   overflow: hidden;
   display: flex;
@@ -19,15 +19,13 @@
   padding: 0;
   /* Titulo se refiere al encabezado de la pagina, es flex, de color azul */
 }
-.contenido__imagen{
+.contenido__imagen {
   transition: 1s;
 }
 /* agrandando imagen cuando paso con el mouse por la imagen */
-.contenido__imagen--mlibre:hover
-{
-  transform : scale(1.2);
+.contenido__imagen--mlibre:hover {
+  transform: scale(1.2);
 }
-
 
 @media (max-width: 500px) {
   .titulo {
@@ -42,11 +40,12 @@
   margin-right: 30rem;
   /* border: black solid 5px; */
   padding: 2% 2%;
+
   /*Es uno de los hijos de titulo, se le da propiedades al texto  */
 }
 .titulo__imagen {
   width: 15rem;
-  margin-left: 10;
+  margin-left: 4rem;
   height: 8rem;
   border-radius: 10px;
   /*Es uno de los hijos de titulo, se le da propiedades a la imagen */
@@ -61,11 +60,12 @@
 }
 
 .menu {
+  
   background: #d3d3d3;
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between ;
   align-items: center;
   list-style: none;
   margin-right: 30px;
@@ -106,12 +106,13 @@
   /* position:fixed
   botton:0;  Esto se usaria si quiere que el pie de pagina apareza siempre abajo*/
   background: linear-gradient(blue 40%, white);
-/* Al fondo de final se le da un degrade */
+  /* Al fondo de final se le da un degrade */
   width: 100%;
   height: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
   /* overflow: hidden; este hidden estaria  bien? */
 }
 .final a:hover {
@@ -139,22 +140,21 @@
 }
 
 .final__instagram {
-  padding: 7px 13px;
+  /* padding: 7px 13px; */
   text-decoration: none;
   display: block;
   font-weight: bold;
   font-size: 30px;
   color: black;
-  margin-right: 10%;
 }
 .final__imagen {
   border-radius: 10px;
-  width: 50px;
-  height: 60px;
-  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  /* padding: 0; */
   align-self: center;
   display: block;
-  margin-left: 1%;
+  /* margin-left: 1%; */
 }
 
 .contenido {
@@ -180,8 +180,10 @@
   display: flex;
   flex-direction: column;
 }
-.contenido__imagen--mlibre{
-  background-image:linear-gradient(60% yellow, white)
+.contenido__imagen--mlibre {
+  background-image: linear-gradient(60% yellow, white);
+  height: auto;
+  width: auto;
 }
 
 .formulario {
@@ -239,6 +241,7 @@
   grid-template-areas:
     "vacio1 formulario vacio2"
     "instagram video mapa";
+
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
   margin: auto;
@@ -250,8 +253,8 @@
 #instagram {
   grid-area: instagram;
 }
-#instagram:hover{
-  transform : scale(1.5);
+#instagram:hover {
+  transform: scale(1.5);
 }
 #mapa {
   grid-area: mapa;
@@ -265,8 +268,8 @@
   align-items: center;
   justify-content: center;
 }
-#video:hover{
-  transform : scale(1.5);
+#video:hover {
+  transform: scale(1.5);
 }
 @media (max-width: 500px) {
   #contacto {
