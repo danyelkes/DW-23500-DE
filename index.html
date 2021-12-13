@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VendeMas</title>
+    <!-- Vinculando con java script y bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
     <!-- Vinculacion con CSS -->
 </head>
@@ -14,36 +19,86 @@
     <div>
         <!-- Empieza el header -->
         <header class="titulo">
+            <div class="container">
+                <!-- Agregando la clase row -->
+                <div class="row">
+                    <div class="col-sm-6">
+
             <img class="titulo__imagen" src="./recursos/vendemas.jpg">
+        </div>
+        <div class="col-sm-6">
+
             <h1 class="titulo__texto">VendeMas</h1>
+        </div>
+
+           </div>
+        </div>
+
         </header>
         <!-- termina el header -->
         <!-- Empieza el nav,position sticky -->
-        <nav class="menu-sticky">
-            <ul class="menu">
-                <li><a class="menu__index" href="./index.html"><strong>Inicio</strong></a></li>
-                <li><a href="./paginas/quienessomos.html" class="menu__quienes">¿Quienes somos?</a></li>
-                <li><a href="./paginas/servicios.html" class="menu__servicios">Servicios</a></li>
 
-                <li><a class="menu__casos" href="./paginas/casosdeexito.html">Casos de exito</a></li>
-                <li> <a class="menu__contacto" href="./paginas/contacto.html">Contacto</a></li>
+
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+             <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="menu" class="navbar-nav mr-auto" >
+                <li class="nav-item active">
+                    <a class="menu__index nav-link" href="./index.html">Inicio<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./paginas/quienessomos.html" class="menu__quienes nav-link">¿Quienes somos?<span class="sr-only"></span></a></li>
+
+               
+                <li class="nav-item dropdown nav-item active">
+                    <a href="./paginas/servicios.html" class="menu__servicios nav-link dropdown-toggle" id="navbarDropdown" role="button" 
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./paginas/servicios.html">Consultoria</a>
+                        <a class="dropdown-item" href="./paginas/servicios.html">Asesoramiento</a>
+                       </div>
+
+
+
+                <li class="nav-item active">
+                    <a class="menu__casos nav-link" href="./paginas/casosdeexito.html">Casos de exito<span class="sr-only"></a>
+                </li>
+                <li class="nav-item active">
+                     <a class="menu__contacto nav-link" href="./paginas/contacto.html">Contacto<span class="sr-only"></span></a>
+                    </li>
             </ul>
         </nav>
+
+      
+
+
         <!-- Termina el nav -->
         <!-- Empieza el menu de la pagina -->
         <main>
             <section class="contenido">
+                <div class="row">
+                    <!-- <div class="col"> -->
+<!-- NO ENTIENDO PORQUE CON LA CLASE COL, NO FUNCIONA CORRECTAMENTE EL MENU STICKY -->
                 <article class="contenido__imagen">
                     <img class="contenido__imagen--mlibre" src="./recursos/mlibre.png" />
+                </div> 
 
                 </article>
+              <div class="col"> 
+
                 <article class="contenido__texto">
-                    <div>
                         <h2 class="texto1">Consultoria y asesoramiento en la mayor plataforma de latinoamerica</h2>
-                    </div>
-                    
+                    <h4>Los mejores especialstas para que puedas aumentar tus ventas online. No dudes en contactarnos</h4>
 
                 </article>
+             </div> 
+
+            </div>
 
             </section>
 
@@ -51,14 +106,28 @@
         <!-- Termina el menu de la pagina -->
         <!-- Creando el pie de pagina -->
         <footer class="final">
-            <img class="final__imagen" src="./recursos/whatsapp.jpg" alt="">
-            <h3 class="final__pagina--tel"> Whatsapp:+54113264633 </h3>
-            <h3 class="final__pagina--mail">Vendemas@gmail.com </h3>
-            <a href="https://www.instagram.com/vendemas.dig/" target="_blank" class="final__instagram">Instagram</a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <img class="final__imagen" src="./recursos/whatsapp.jpg" alt="">
+                      </div>
+                      <div class="col">
+                        <h3 class="final__pagina--tel"> Whatsapp:+54113264633 </h3>
+                      </div>
+                      <div class="col">
+                        <h3 class="final__pagina--mail">Vendemas@gmail.com </h3>
+                      </div>
+                      <div class="col">
+                        <a href="https://www.instagram.com/vendemas.dig/" target="_blank" class="final__instagram">Instagram</a>
             <!-- redireccion al link  de instagram-->
+
+                      </div>
+        </div>
+    </div>
         </footer>
         <!-- Finalizacion del pie de la pagina -->
-    </div>
+
+        
 </body>
 
 </html>
