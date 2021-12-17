@@ -2,7 +2,8 @@
   /* min-height: 100vh;  ver para que sirve*/
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .titulo {
@@ -10,21 +11,35 @@
   height: auto;
   background: radial-gradient(circle, blue, white);
   /* Al fondo de final se le da un degrade */
-
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   padding: 0;
   /* Titulo se refiere al encabezado de la pagina, es flex, de color azul */
 }
-.contenido__imagen {
-  transition: 1s;
+
+.titulo__texto {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-right: 30rem;
+  /* border: black solid 5px; */
+  padding: 2% 2%;
+  /*Es uno de los hijos de titulo, se le da propiedades al texto  */
 }
+
 /* agrandando imagen cuando paso con el mouse por la imagen */
 .contenido__imagen--mlibre:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media (max-width: 500px) {
@@ -33,16 +48,7 @@
     /* Como poner los elementos en el medio? */
   }
 }
-.titulo__texto {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  margin-right: 30rem;
-  /* border: black solid 5px; */
-  padding: 2% 2%;
 
-  /*Es uno de los hijos de titulo, se le da propiedades al texto  */
-}
 .titulo__imagen {
   width: 15rem;
   margin-left: 4rem;
@@ -50,29 +56,36 @@
   border-radius: 10px;
   /*Es uno de los hijos de titulo, se le da propiedades a la imagen */
 }
+
 .menu-sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   /* flex-wrap: wrap; */
   /* El nav tiene position sticky */
 }
 
 .menu {
-  
   background: #d3d3d3;
   width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between ;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
   margin-right: 30px;
   margin: 0;
   padding: 0;
   /* flex-wrap: wrap;  */
-
   /* El menu que es el nav es display flex. El hija que es la lista se le da el formato list stylle none para sacarle los puntos*/
 }
 
@@ -93,6 +106,7 @@
   font-size: 2rem;
   color: black;
 }
+
 .menu li a:hover {
   /* animacion */
   color: orange;
@@ -104,22 +118,30 @@
   bottom: 0;
   margin-bottom: 0;
   /* position:fixed
-  botton:0;  Esto se usaria si quiere que el pie de pagina apareza siempre abajo*/
+    botton:0;  Esto se usaria si quiere que el pie de pagina apareza siempre abajo*/
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, blue), to(white));
   background: linear-gradient(blue 40%, white);
   /* Al fondo de final se le da un degrade */
   width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* overflow: hidden; este hidden estaria  bien? */
 }
+
 .final a:hover {
   /* animacion */
   color: yellowgreen;
   /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
 }
+
 /* Uso media querie... si la pantalla es menor a 500 px display es block */
 @media (max-width: 500px) {
   .final {
@@ -147,12 +169,15 @@
   font-size: 30px;
   color: black;
 }
+
 .final__imagen {
   border-radius: 10px;
   width: 2rem;
   height: 2rem;
   /* padding: 0; */
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   display: block;
   /* margin-left: 1%; */
 }
@@ -161,11 +186,16 @@
   background: white;
   width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
   padding: 0;
 }
+
 /* Uso media querie... si la pantalla es menor a 500 px display es block */
 @media (max-width: 500px) {
   .contenido {
@@ -175,12 +205,28 @@
 
 .contenido article {
   border: black solid 5px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
+.contenido__imagen {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .contenido__imagen--mlibre {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(yellow, 60%), to(white));
   background-image: linear-gradient(60% yellow, white);
   height: auto;
   width: auto;
@@ -191,11 +237,14 @@
   height: auto;
   width: auto;
   /* display: block; */
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 2rem;
   padding: 3rem;
   /* align-items: center;
-        justify-content: center; */
+          justify-content: center; */
   /*ver diferencia justify center y align items  */
   border: black solid 5px;
   /* margin-right: 0; */
@@ -206,22 +255,40 @@
 }
 
 .principal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: blue;
   font-size: 30px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   justify-items: center;
   list-style: none;
 }
 
 .marco {
   border: black solid 5px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .principal li {
@@ -229,48 +296,76 @@
 }
 
 .pricipal h4 {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #contacto {
   /* Contacto  es el id de section dentro del main en contacto.html va a ser display grid */
   background-color: white;
-  height: 100vh;
+  height: 100%;
+  display: -ms-grid;
   display: grid;
-  grid-template-areas:
-    "vacio1 formulario vacio2"
-    "instagram video mapa";
-
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "vacio1 formulario vacio2" "instagram video mapa";
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
   margin: auto;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 #instagram {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: instagram;
 }
+
 #instagram:hover {
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
+
 #mapa {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: mapa;
 }
 
 .formulario {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: formulario;
 }
+
 #video {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: video;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 #video:hover {
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
+
 @media (max-width: 500px) {
   #contacto {
     display: block;
@@ -281,3 +376,4 @@
   background: red;
   color: white;
 }
+/*# sourceMappingURL=estilos.css.map */
