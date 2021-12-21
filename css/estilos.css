@@ -24,6 +24,7 @@
   margin: 0;
   padding: 0;
   /* Titulo se refiere al encabezado de la pagina, es flex, de color azul */
+  /*Es uno de los hijos de titulo, se le da propiedades al texto  */
 }
 
 .titulo__texto {
@@ -33,7 +34,14 @@
   margin-right: 30rem;
   /* border: black solid 5px; */
   padding: 2% 2%;
-  /*Es uno de los hijos de titulo, se le da propiedades al texto  */
+}
+
+.titulo__imagen {
+  width: 15rem;
+  margin-left: 4rem;
+  height: 8rem;
+  border-radius: 10px;
+  /*Es uno de los hijos de titulo, se le da propiedades a la imagen */
 }
 
 /* agrandando imagen cuando paso con el mouse por la imagen */
@@ -47,25 +55,6 @@
     display: block;
     /* Como poner los elementos en el medio? */
   }
-}
-
-.titulo__imagen {
-  width: 15rem;
-  margin-left: 4rem;
-  height: 8rem;
-  border-radius: 10px;
-  /*Es uno de los hijos de titulo, se le da propiedades a la imagen */
-}
-
-.menu-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* flex-wrap: wrap; */
-  /* El nav tiene position sticky */
 }
 
 .menu {
@@ -89,13 +78,6 @@
   /* El menu que es el nav es display flex. El hija que es la lista se le da el formato list stylle none para sacarle los puntos*/
 }
 
-/* Uso media querie... si la pantalla es menor a 500 px display es block */
-@media (max-width: 500px) {
-  .menu {
-    display: block;
-  }
-}
-
 .menu li {
   margin-right: 2%;
 }
@@ -111,6 +93,13 @@
   /* animacion */
   color: orange;
   /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
+}
+
+/* Uso media querie... si la pantalla es menor a 500 px display es block */
+@media (max-width: 500px) {
+  .menu {
+    display: block;
+  }
 }
 
 .final {
@@ -142,20 +131,13 @@
   /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
 }
 
-/* Uso media querie... si la pantalla es menor a 500 px display es block */
-@media (max-width: 500px) {
-  .final {
-    display: block;
-  }
-}
-
-.final__pagina--tel {
+.final__tel {
   font-weight: bold;
   font-size: 30px;
   color: black;
 }
 
-.final__pagina--mail {
+.final__mail {
   font-weight: bold;
   font-size: 30px;
   color: black;
@@ -182,6 +164,13 @@
   /* margin-left: 1%; */
 }
 
+/* Uso media querie... si la pantalla es menor a 500 px display es block */
+@media (max-width: 500px) {
+  .final {
+    display: block;
+  }
+}
+
 .contenido {
   background: white;
   width: 100%;
@@ -194,13 +183,6 @@
           justify-content: center;
   justify-items: center;
   padding: 0;
-}
-
-/* Uso media querie... si la pantalla es menor a 500 px display es block */
-@media (max-width: 500px) {
-  .contenido {
-    display: block;
-  }
 }
 
 .contenido article {
@@ -220,16 +202,23 @@
           flex-direction: column;
 }
 
-.contenido__imagen {
+.contenido.__imagen {
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.contenido__imagen--mlibre {
+.contenido.__imagen--mlibre {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(yellow, 60%), to(white));
   background-image: linear-gradient(60% yellow, white);
   height: auto;
   width: auto;
+}
+
+/* Uso media querie... si la pantalla es menor a 500 px display es block */
+@media (max-width: 500px) {
+  .contenido {
+    display: block;
+  }
 }
 
 .formulario {
@@ -274,6 +263,19 @@
   list-style: none;
 }
 
+.principal li {
+  list-style: none;
+}
+
+.principal li h4 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .marco {
   border: black solid 5px;
   -webkit-box-align: center;
@@ -289,19 +291,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.principal li {
-  list-style: none;
-}
-
-.pricipal h4 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #contacto {
@@ -332,7 +321,7 @@
   grid-area: instagram;
 }
 
-#instagram:hover {
+#instagram :hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }

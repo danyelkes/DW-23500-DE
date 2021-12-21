@@ -26,8 +26,15 @@
       margin-right: 30rem;
       /* border: black solid 5px; */
       padding: 2% 2%;
-    
+    }
       /*Es uno de los hijos de titulo, se le da propiedades al texto  */
+      &__imagen {
+        width: 15rem;
+        margin-left: 4rem;
+        height: 8rem;
+        border-radius: 10px;
+        /*Es uno de los hijos de titulo, se le da propiedades a la imagen */
+      
     }
   }
   
@@ -52,24 +59,17 @@
   
   //   /*Es uno de los hijos de titulo, se le da propiedades al texto  */
   // }
-  .titulo__imagen {
-    width: 15rem;
-    margin-left: 4rem;
-    height: 8rem;
-    border-radius: 10px;
-    /*Es uno de los hijos de titulo, se le da propiedades a la imagen */
-  }
-  .menu-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20px;
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* El nav tiene position sticky */
-  }
+ 
+  // .menu-sticky {
+  //   position: -webkit-sticky;
+  //   position: sticky;
+  //   top: 20px;
+  //   display: flex;
+  //   /* flex-wrap: wrap; */
+  //   /* El nav tiene position sticky */
+  // }
   
   .menu {
-    
     background: #d3d3d3;
     width: 100%;
     height: auto;
@@ -81,33 +81,28 @@
     margin: 0;
     padding: 0;
     /* flex-wrap: wrap;  */
-  
     /* El menu que es el nav es display flex. El hija que es la lista se le da el formato list stylle none para sacarle los puntos*/
+   & li {
+      margin-right: 2%;
+      & a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2rem;
+        color: black;
+      }
+      & a:hover {
+        /* animacion */
+        color: orange;
+        /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
+      }
+    }
   }
-  
   /* Uso media querie... si la pantalla es menor a 500 px display es block */
   @media (max-width: 500px) {
     .menu {
       display: block;
     }
   }
-  
-  .menu li {
-    margin-right: 2%;
-  }
-  
-  .menu li a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 2rem;
-    color: black;
-  }
-  .menu li a:hover {
-    /* animacion */
-    color: orange;
-    /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
-  }
-  
   .final {
     position: relative;
     bottom: 0;
@@ -123,47 +118,45 @@
     align-items: center;
   
     /* overflow: hidden; este hidden estaria  bien? */
-  }
-  .final a:hover {
-    /* animacion */
-    color: yellowgreen;
-    /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
+    & a:hover {
+      /* animacion */
+      color: yellowgreen;
+      /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
+    }
+    &__tel{
+      font-weight: bold;
+      font-size: 30px;
+      color: black;
+    }
+    &__mail {
+      font-weight: bold;
+      font-size: 30px;
+      color: black;
+    }
+    &__instagram {
+      /* padding: 7px 13px; */
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+      font-size: 30px;
+      color: black;
+    }
+    &__imagen {
+      border-radius: 10px;
+      width: 2rem;
+      height: 2rem;
+      /* padding: 0; */
+      align-self: center;
+      display: block;
+      /* margin-left: 1%; */
+    }
+    
   }
   /* Uso media querie... si la pantalla es menor a 500 px display es block */
   @media (max-width: 500px) {
     .final {
       display: block;
     }
-  }
-  
-  .final__pagina--tel {
-    font-weight: bold;
-    font-size: 30px;
-    color: black;
-  }
-  
-  .final__pagina--mail {
-    font-weight: bold;
-    font-size: 30px;
-    color: black;
-  }
-  
-  .final__instagram {
-    /* padding: 7px 13px; */
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
-    font-size: 30px;
-    color: black;
-  }
-  .final__imagen {
-    border-radius: 10px;
-    width: 2rem;
-    height: 2rem;
-    /* padding: 0; */
-    align-self: center;
-    display: block;
-    /* margin-left: 1%; */
   }
   
   .contenido {
@@ -174,6 +167,21 @@
     justify-content: center;
     justify-items: center;
     padding: 0;
+    & article {
+      border: black solid 5px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+    &.__imagen {
+      transition: 1s;
+      &--mlibre {
+        background-image: linear-gradient(60% yellow, white);
+        height: auto;
+        width: auto;
+      }
+    }
     
   }
   /* Uso media querie... si la pantalla es menor a 500 px display es block */
@@ -182,23 +190,7 @@
       display: block;
     }
   }
-  
-  .contenido article {
-    border: black solid 5px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .contenido__imagen {
-    transition: 1s;
-  }
-  .contenido__imagen--mlibre {
-    background-image: linear-gradient(60% yellow, white);
-    height: auto;
-    width: auto;
-  }
-  
+    
   .formulario {
     background: white;
     height: auto;
@@ -212,12 +204,11 @@
     /*ver diferencia justify center y align items  */
     border: black solid 5px;
     /* margin-right: 0; */
+    & li {
+      list-style: none;
+    }
   }
-  
-  .formulario li {
-    list-style: none;
-  }
-  
+    
   .principal {
     display: flex;
     align-items: center;
@@ -227,23 +218,21 @@
     flex-direction: column;
     justify-items: center;
     list-style: none;
+    & li {
+      list-style: none;
+      & h4 {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    
   }
-  
   .marco {
     border: black solid 5px;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-  }
-  
-  .principal li {
-    list-style: none;
-  }
-  
-  .pricipal h4 {
-    align-items: center;
-    justify-content: center;
   }
   
   #contacto {
@@ -264,10 +253,11 @@
   
   #instagram {
     grid-area: instagram;
+    & :hover {
+      transform: scale(1.5);
+    }
   }
-  #instagram:hover {
-    transform: scale(1.5);
-  }
+  
   #mapa {
     grid-area: mapa;
   }
