@@ -4,12 +4,29 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  
+  $azul:blue;
+  $blanco:white;
+  $naranja:orange;
+  $amarillo:yellow;
+  $rojo:red;
+//agregando extend
+  %media{
+    display: block;
+  }
+  //agregando mapas
+  $letra: (
+    h1: 15rem,
+    h2: 4rem,
+    h3: 8rem
+  );
+  $h1:map-get($letra,h1);
+  $h2:map-get($letra,h2);
+  $h3:map-get($letra,h3);
+
   .titulo {
     width: 100%;
     height: auto;
-    background: radial-gradient(circle, blue, white);
+    background: radial-gradient(circle, $azul,$blanco);
     /* Al fondo de final se le da un degrade */
     overflow: hidden;
     display: flex;
@@ -22,16 +39,16 @@
     &__texto {
       font-size: 3rem;
       font-weight: bold;
-      color: white;
+      color: $blanco;
       margin-right: 30rem;
       /* border: black solid 5px; */
       padding: 2% 2%;
     }
       /*Es uno de los hijos de titulo, se le da propiedades al texto  */
       &__imagen {
-        width: 15rem;
-        margin-left: 4rem;
-        height: 8rem;
+        width: $h1;
+        margin-left: $h2;
+        height:$h3;
         border-radius: 10px;
         /*Es uno de los hijos de titulo, se le da propiedades a la imagen */
       
@@ -45,7 +62,7 @@
   
   @media (max-width: 500px) {
     .titulo {
-      display: block;
+        @extend %media;
       /* Como poner los elementos en el medio? */
     }
   }
@@ -68,11 +85,19 @@
   //   /* flex-wrap: wrap; */
   //   /* El nav tiene position sticky */
   // }
-  
+
+  //Agregando mixin
+  @mixin container($ancho,$largo,$color) {
+    width: $ancho;
+    height: $largo;
+    background-color: $color;
+
+  }
   .menu {
-    background: #d3d3d3;
-    width: 100%;
-    height: auto;
+    // background: #d3d3d3;
+    // width: 100%;
+    // height: auto;
+    @include container(100%, auto,#d3d3d3);
     display: flex;
     justify-content: space-between ;
     align-items: center;
@@ -82,17 +107,18 @@
     padding: 0;
     /* flex-wrap: wrap;  */
     /* El menu que es el nav es display flex. El hija que es la lista se le da el formato list stylle none para sacarle los puntos*/
-   & li {
+      li {
       margin-right: 2%;
-      & a {
+       a {
         text-decoration: none;
         font-weight: bold;
         font-size: 2rem;
         color: black;
       }
-      & a:hover {
+     
+       a:hover {
         /* animacion */
-        color: orange;
+        color: $naranja;
         /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
       }
     }
@@ -100,7 +126,7 @@
   /* Uso media querie... si la pantalla es menor a 500 px display es block */
   @media (max-width: 500px) {
     .menu {
-      display: block;
+      @extend %media;
     }
   }
   .final {
@@ -118,20 +144,22 @@
     align-items: center;
   
     /* overflow: hidden; este hidden estaria  bien? */
-    & a:hover {
+     a:hover {
       /* animacion */
-      color: yellowgreen;
+      color: $amarillo;
       /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
     }
-    &__tel{
+    // agregando EXTEND
+    %contacto{
       font-weight: bold;
       font-size: 30px;
       color: black;
     }
+    &__tel{
+     @extend %contacto;
+    }
     &__mail {
-      font-weight: bold;
-      font-size: 30px;
-      color: black;
+      @extend %contacto;
     }
     &__instagram {
       /* padding: 7px 13px; */
@@ -155,14 +183,15 @@
   /* Uso media querie... si la pantalla es menor a 500 px display es block */
   @media (max-width: 500px) {
     .final {
-      display: block;
+        @extend %media;
     }
   }
   
   .contenido {
-    background: white;
-    width: 100%;
-    height: auto;
+    // background: $blanco;
+    // width: 100%;
+    // height: auto;
+    @include container(100%, auto,#d3d3d3);
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -174,10 +203,10 @@
       display: flex;
       flex-direction: column;
     }
-    &.__imagen {
+    &__imagen {
       transition: 1s;
       &--mlibre {
-        background-image: linear-gradient(60% yellow, white);
+        background-image: linear-gradient(60% $amarillo, $blanco);
         height: auto;
         width: auto;
       }
@@ -187,14 +216,16 @@
   /* Uso media querie... si la pantalla es menor a 500 px display es block */
   @media (max-width: 500px) {
     .contenido {
-      display: block;
+      @extend %media;
     }
   }
     
   .formulario {
-    background: white;
-    height: auto;
-    width: auto;
+    // background: $blanco;
+    // height: auto;
+    // width: auto;
+    @include container(auto, auto,#d3d3d3);
+
     /* display: block; */
     flex-direction: column;
     margin-top: 2rem;
@@ -204,23 +235,28 @@
     /*ver diferencia justify center y align items  */
     border: black solid 5px;
     /* margin-right: 0; */
-    & li {
+     li {
       list-style: none;
     }
+    input:focus {
+      background: $rojo;
+      color: $blanco;
+    }
+    
   }
     
   .principal {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: blue;
+    color: $azul;
     font-size: 30px;
     flex-direction: column;
     justify-items: center;
     list-style: none;
-    & li {
+     li {
       list-style: none;
-      & h4 {
+       h4 {
         align-items: center;
         justify-content: center;
       }
@@ -234,7 +270,9 @@
     display: flex;
     flex-direction: column;
   }
-  
+ 
+ 
+
   #contacto {
     /* Contacto  es el id de section dentro del main en contacto.html va a ser display grid */
     background-color: white;
@@ -253,7 +291,7 @@
   
   #instagram {
     grid-area: instagram;
-    & :hover {
+     :hover {
       transform: scale(1.5);
     }
   }
@@ -275,12 +313,8 @@
   }
   @media (max-width: 500px) {
     #contacto {
-      display: block;
+      @extend %media;
     }
   }
   
-  .formulario input:focus {
-    background: red;
-    color: white;
-  }
   

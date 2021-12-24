@@ -131,13 +131,7 @@
   /* Se le da la propiedad hover para que cuando el mouse este sobre cada item, haga un efecto de sombrado */
 }
 
-.final__tel {
-  font-weight: bold;
-  font-size: 30px;
-  color: black;
-}
-
-.final__mail {
+.final .final__tel, .final .final__mail {
   font-weight: bold;
   font-size: 30px;
   color: black;
@@ -202,12 +196,12 @@
           flex-direction: column;
 }
 
-.contenido.__imagen {
+.contenido__imagen {
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.contenido.__imagen--mlibre {
+.contenido__imagen--mlibre {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(yellow, 60%), to(white));
   background-image: linear-gradient(60% yellow, white);
   height: auto;
@@ -241,6 +235,11 @@
 
 .formulario li {
   list-style: none;
+}
+
+.formulario input:focus {
+  background: red;
+  color: white;
 }
 
 .principal {
@@ -359,10 +358,5 @@
   #contacto {
     display: block;
   }
-}
-
-.formulario input:focus {
-  background: red;
-  color: white;
 }
 /*# sourceMappingURL=estilos.css.map */
